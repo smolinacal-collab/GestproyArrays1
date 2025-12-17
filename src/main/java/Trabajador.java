@@ -40,7 +40,23 @@ public class Trabajador {
         // 10 espacios para el nombre alineado a la izquierda seguido de su precio hora espacio y "E." utilizando format
         // 123456789012345678901234567890
         // Aitor     90 E.
-        return "";
+
+//        he quitado un % porque daba error al ejecutarse
+        return String.format("%-8s %3d E.",
+                nombre,
+                getPrecioHora());
+
+    }
+
+    public static void main(String[] args) {
+        Trabajador t1 = new Trabajador("Juan");
+        System.out.println(t1);
+        Trabajador t2= new Trabajador("Elissa");
+        t2.setCategoria(Ctes.CAT_JUNIOR);
+        System.out.println(t2);
+
+        Trabajador t3 = new Trabajador("Carlos");
+        System.out.println(t3);
     }
 
 }

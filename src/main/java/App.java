@@ -3,7 +3,7 @@ public class App {
     private GestProy gestProy;
 
     public App() {
-        // TODO 11: Inicializar atributos
+        // TODO 11: Inicializar atributos DONE
         gestProy = new GestProy();
     }
 
@@ -49,9 +49,24 @@ public class App {
         // TODO 12: Mientras no se indique la opción 0 para terminar y se puedan añadir participantes hacerlo
         // mostrar la lista de trabajadores, leer el número del trabajador y añadirlo al proyecto
         // si no se puede agregar el participante al proyecto salir del bucle
-        if (!gestProy.puedeHaberMasProyectos(){
-            System.out.println("Terminael proyecto iniciado para añadir más participantes.");
-            return;
+
+
+        /**
+         * estoy en ello kdarwic*/
+
+        while (true) {
+
+            Trabajadores.mostrar();
+
+            int numTrabajador = Gui.leerNumero("Número del trabajador: ");
+            if (numTrabajador == 0 || numTrabajador < 1 || numTrabajador > 8) { break; }
+//            gestProy.
+
+            if (!gestProy.puedeHaberMasProyectos()) {
+                System.out.println("Terminael proyecto iniciado para añadir más participantes.");
+                return;
+            }
+
         }
 
 
@@ -84,7 +99,7 @@ public class App {
     }
 
     private void mostrarProyectos() {
-        // TODO 14: Mostrar proyectos
+        // TODO 14: Mostrar proyectos DONE
         gestProy.mostrarProyectos();
     }
 

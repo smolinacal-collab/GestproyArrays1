@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //public class Trabajadores {
 //
 //    public static Trabajador getTrabajador(int numero) {
@@ -39,5 +40,50 @@
 //    }
 //
 //}
+=======
+public class Trabajadores {
+
+    private static Trabajador[] trabajadores= {
+            new Trabajador("Aitor", 2),
+            new Trabajador("Alba", 2),
+            new Trabajador("Ander", 1),
+            new Trabajador("Laura", 1),
+            new Trabajador("Nerea", 1),
+            new Trabajador("Edurne", 0),
+            new Trabajador("Tasio", 0),
+            new Trabajador("Iosu", 0),
+    };
+
+    public static Trabajador getTrabajador(int numero) {
+        if (numero < 1 || numero > trabajadores.length) {
+            return null;
+        }
+        return trabajadores[numero-1];
+    }
+
+    public static void mostrar() {
+        // TODO 61: Mostrar la información del trabajador según el formato dado utilizando printf
+        // 2 espacios para el número del trabajador, luego un punto, un espacio y la representación del trabajador
+        // 12345678901234567890
+        //  1. Aitor     90 E.
+        //  2. Alba      90 E.
+        //  3. Ander     50 E.
+        //  4. Laura     50 E.
+        //  5. Nerea     50 E.
+        //  6. Edurne    20 E.
+        //  7. Tasio     20 E.
+        //  8. Iosu      20 E.
+        for (int i = 0; i < trabajadores.length; i++) {
+            System.out.printf("%2d. %-8s %3d E.\n",
+                    i+1,
+                    trabajadores[i].getNombre(),
+                    trabajadores[i].getPrecioHora());
+        }
+    }
+
+    public static void main(String[] args) {
+        mostrar();
+    }
+>>>>>>> e1c3d7f0024b29491d1943520838239455c42f8a
 
 }
