@@ -4,7 +4,7 @@ public class App {
 
     public App() {
         // TODO 11: Inicializar atributos
-
+        gestProy = new GestProy();
     }
 
     public void run() {
@@ -49,8 +49,10 @@ public class App {
         // TODO 12: Mientras no se indique la opción 0 para terminar y se puedan añadir participantes hacerlo
         // mostrar la lista de trabajadores, leer el número del trabajador y añadirlo al proyecto
         // si no se puede agregar el participante al proyecto salir del bucle
-
-
+        if (!gestProy.puedeHaberMasProyectos(){
+            System.out.println("Terminael proyecto iniciado para añadir más participantes.");
+            return;
+        }
 
 
 
@@ -68,7 +70,7 @@ public class App {
     private void terminarProyecto() {
         int numProyecto = Gui.leerNumero("Indica el número del proyecto a cerrar: ");
         // TODO 13: Terminar el proyecto
-
+        gestProy.terminarProyecto(numProyecto);
         System.out.println("Hecho.");
     }
 
@@ -83,7 +85,7 @@ public class App {
 
     private void mostrarProyectos() {
         // TODO 14: Mostrar proyectos
-
+        gestProy.mostrarProyectos();
     }
 
 }
