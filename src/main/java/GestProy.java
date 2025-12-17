@@ -1,29 +1,32 @@
 public class GestProy {
+//Atributos
+    private Proyecto[] proyectos = new Proyecto[10];
+//    en d atributos
 
     // region atributos
-    private Proyecto proyecto1;
-    private Proyecto proyecto2;
-    private Proyecto proyecto3;
-    private Proyecto proyecto4;
+//    private Proyecto proyecto1;
+//    private Proyecto proyecto2;
+//    private Proyecto proyecto3;
+//    private Proyecto proyecto4;
     // endregion
 
     // getters y setters
     public Proyecto getProyecto(int numero) {
-        switch (numero){
-            case 1: return proyecto1;
-            case 2: return proyecto2;
-            case 3: return proyecto3;
-            case 4: return proyecto4;
-        }
+//        switch (numero){
+//            case 1: return proyecto1;
+//            case 2: return proyecto2;
+//            case 3: return proyecto3;
+//            case 4: return proyecto4;
+//        }
         return null;
     }
 
     public void setProyecto(int numero, Proyecto proyecto) {
         switch (numero){
-            case 1: proyecto1 = proyecto; break;
-            case 2: proyecto2 = proyecto; break;
-            case 3: proyecto3 = proyecto; break;
-            case 4: proyecto4 = proyecto; break;
+//            case 1: proyecto1 = proyecto; break;
+//            case 2: proyecto2 = proyecto; break;
+//            case 3: proyecto3 = proyecto; break;
+//            case 4: proyecto4 = proyecto; break;
         }
     }
     // endregion
