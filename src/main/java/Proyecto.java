@@ -7,11 +7,14 @@ public class Proyecto {
 
     // region constructores
     public Proyecto(String nombre){
-        // TODO 41: Constructor 1 Proyecto
+        // TODO 41: Constructor 1 Proyecto DONE
+        this.nombre= nombre;
 
     }
     public Proyecto(String nombre, int presupuesto) {
-        // TODO 42: Constructor 2 Proyecto
+        // TODO 42: Constructor 2 Proyecto DONE
+        this.nombre= nombre;
+        this.presupuesto= presupuesto;
 
     }
     // endregion
@@ -64,7 +67,8 @@ public class Proyecto {
         equipo.setLider(numeroParticipante);
     }
     public void mostrarEquipo() {
-        // TODO 43: Mostrar el equipo
+        // TODO 43: Mostrar el equipo DONE
+        equipo.mostrar();
 
     }
 
@@ -77,11 +81,22 @@ public class Proyecto {
         // 12345678901234567890123456789012345678901234567890123456789012345678901234567890
         // |                   |        |         |            |         |         |
         // CartasCoches        Aitor             10 h.      1300      1200      -100
+
         Trabajador lider = equipo.getLider();
 
+        int precio = getPrecio();
+        int diferencia = presupuesto - precio;
 
+        if (equipo.getLider() != null) {
+            return String.format("%-20s %-10s %10d h. %10d %10d %10d",
+                    nombre,
+                    equipo.getLider().getNombre(),
+                    horas,
+                    precio,
+                    presupuesto,
+                    diferencia);
+        }
 
         return "";
     }
-
 }

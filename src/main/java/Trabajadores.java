@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //public class Trabajadores {
 //
 //    public static Trabajador getTrabajador(int numero) {
@@ -40,7 +39,6 @@
 //    }
 //
 //}
-=======
 public class Trabajadores {
 
     private static Trabajador[] trabajadores= {
@@ -54,7 +52,7 @@ public class Trabajadores {
             new Trabajador("Iosu", 0),
     };
 
-    public static Trabajador getTrabajador(int numero) {
+    public static Trabajador getTrabajador(int numero) {  //TODO DONE
         if (numero < 1 || numero > trabajadores.length) {
             return null;
         }
@@ -84,6 +82,5 @@ public class Trabajadores {
     public static void main(String[] args) {
         mostrar();
     }
->>>>>>> e1c3d7f0024b29491d1943520838239455c42f8a
 
 }
