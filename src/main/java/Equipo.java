@@ -29,27 +29,27 @@ public class Equipo {
 
     public boolean tieneLider() {
         // TODO 21: Saber si el equipo tiene líder
-        return false;
+        return lider != null;
     }
 
     public Trabajador getLider() {
         // TODO 22: Devolver quién es el líder
-        return null;
+        return lider;
     }
 
     public void setLider(int numeroParticipante) {
         // TODO 23: Asignar el liderazgo a un participante
-
+        lider = getParticipante(numeroParticipante);
     }
 
     public int getNumeroParticipantes() {
         // TODO 24: Calcular el número de participantes utilizando un bucle
         int num = 0;
-
-
-
-
-
+        for (int i = 1; i <=getMaxNumeroParticipantes() ; i++) {
+            if (getParticipante(i) != null) {
+                num++;
+            }
+            }
         return num;
     }
 
@@ -59,36 +59,36 @@ public class Equipo {
 
     public boolean addParticipante(Trabajador trabajador) {
         // TODO 25: Agregar un trabajador como participante si no se ha llegado al límite utilizando un bucle
-
-
-
-
-
-
-
-        return false;
-    }
+            for (int i = 1; i <=getMaxNumeroParticipantes() ; i++) {
+                if (getParticipante(i) == null) {
+                    setParticipante(i,trabajador);
+                    return true;
+                }
+            }
+            return false;
+        }
 
     public void mostrar() {
         // TODO 26: Mostrar los participantes del equipo junto con su número de participante utilizando un bucle
+            for (int i = 1; i <=getMaxNumeroParticipantes() ; i++) {
+                Trabajador t = getParticipante(i);
+                if (t != null){
+                    System.out.printf("%d. %s\n", i, t);
+                }
+            }
 
-
-
-
-
-
-    }
+        }
 
     public int getPrecioHora() {
         int precio = 0;
         // TODO 27: Calcular el precio de la hora de todos los participantes del equipo utilizando un bucle
+            for (int i = 1; i <=getMaxNumeroParticipantes() ; i++) {
+                Trabajador t = getParticipante(i);
+                if (t != null){
+                    precio += t.getPrecioHora();
+                }
+            }
+            return precio;
+        }
 
-
-
-
-
-
-        return precio;
     }
-
-}
